@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>{title} - Peer-to-Peer Network</title>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="/uimedia/all.css?rev={rev}">
+ <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖧</text></svg>">
+ {meta_tags}
+</head>
+<body style="{body_style}" class="{themeclass}">
+
+<div class="unsupported" id="unsupported">
+ <script nonce="{script_nonce}">document.getElementById('unsupported').style.display = "none"</script>
+ <h3>JavaScript is not enabled! To view this site without JavaScript, navigate to <a href="http://127.0.0.1:55555/raw/{address}" title="raw/{address}">http://127.0.0.1:55555/<strong>raw/</strong>{address}</a>.</h3>
+</div>
+
+<script nonce="{script_nonce}">
+if (window.self !== window.top) {
+	window.open(window.location.toString().replace(/([&?])wrapper=False/, "$1").replace(/&$/, "").replace(/[&?]wrapper_nonce=[A-Za-z0-9]+/, ""), "_top");
+	window.stop();
+	document.execCommand("Stop", false);
+}
+
+else if (window.opener && window.opener.location.toString()) {
+	document.write("Opened as child-window, stopping...");
+	window.stop();
+	document.execCommand("Stop", false);
+}
+</script>
+
+<div class="progressbar">
+ <div class="peg"></div>
+</div>
+
+<div class='fixbutton'>
+ <div class='fixbutton-p2p'>&#x1F5A7;</div>
+ <div class='fixbutton-document'>&#x1F5B9;</div>
+ <a class='fixbutton-bg' href="{homepage}/"></a>
+</div>
+
+<div class='notifications'>
+ <div class='notification template'><span class='notification-icon'>!</span> <span class='body'>Notification test</span><a class="close" href="#Close">&times;</a><div style="clear: both"></div></div>
+</div>
+
+<div class='infopanel-container'>
+ <div class='infopanel'>
+  <span class='closed-num'>21</span>
+  <div class="message">
+   <span class='line line-1'>21 files modified</span><br><span class='line line-2'>content.json, data.json</span>
+  </div>
+  <a href="#Publish" class="button button-submit">Sign & Publish</a>
+  <a href="#Close" class="close">&times;</a>
+ </div>
+</div>
+
+<div class='loadingscreen'>
+ <a href="/Config" class="loading-config">Config</a>
+ <div class='loading-text console'>
+ </div>
+ <div class="flipper-container">
+  <div class="flipper"> <div class="front"></div><div class="back"></div> </div>
+ </div>
+</div>
+
+<iframe src='about:blank' id='inner-iframe' sandbox="allow-forms allow-scripts allow-top-navigation-by-user-activation allow-popups allow-modals allow-presentation allow-pointer-lock allow-popups-to-escape-sandbox {sandbox_permissions}" allow="fullscreen"></iframe>
+
+<script id="script_init" nonce="{script_nonce}">
+iframe_src = "{file_url}{query_string}"
+console.log("Changing url from " + document.getElementById("inner-iframe").src + " to " + iframe_src)
+document.getElementById("inner-iframe").src = document.getElementById("inner-iframe").src
+document.getElementById("inner-iframe").src = iframe_src
+address = "{address}"
+wrapper_nonce = "{wrapper_nonce}"
+wrapper_key = "{wrapper_key}"
+ajax_key = "{ajax_key}"
+postmessage_nonce_security = {postmessage_nonce_security}
+file_inner_path = "{file_inner_path}"
+permissions = {permissions}
+show_loadingscreen = {show_loadingscreen}
+server_url = '{server_url}'
+script_nonce = '{script_nonce}'
+
+if (typeof WebSocket === "undefined") {
+	tag = document.createElement('div');
+	tag.innerHTML += "<div class='unsupported'>Your browser doesn't support <a href='https://caniuse.com/#search=websocket'>WebSocket connections</a>.<br>Please use the latest <a href='https://www.mozilla.org/firefox/new/'>Firefox</a> or <a href='https://www.google.com/chrome/'>Chrome</a> browser.</div>";
+	document.body.appendChild(tag)
+}
+</script>
+<script src="/uimedia/all.js?rev={rev}&lang={lang}" nonce="{script_nonce}"></script>
+<script nonce="{script_nonce}">setTimeout(window.wrapper.onWrapperLoad, 1)</script>
+</body>
+</html>

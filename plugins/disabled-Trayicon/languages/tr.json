@@ -1,0 +1,12 @@
+{
+	"Peer-to-Peer Network Github": "Peer-to-Peer Network Github",
+	"Report bug/request feature": "Hata bildir/geliştirme taleb et",
+	"!Open Peer-to-Peer Network": "!Peer-to-Peer Network'i Aç",
+	"Quit": "Kapat",
+	"(active)": "(aktif)",
+	"(passive)": "(pasif)",
+	"Connections: %s": "Bağlantı sayısı: %s",
+	"Received: %.2f MB | Sent: %.2f MB": "Gelen: %.2f MB | Gönderilen: %.2f MB",
+	"Show console window": "Konsolu aç",
+	"Start Peer-to-Peer Network when Windows starts": "Peer-to-Peer Network'i açılışta otomatik başlat"
+}

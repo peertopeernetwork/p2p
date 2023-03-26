@@ -1,0 +1,5 @@
+{
+	"name": "TranslateSite",
+	"description": "Transparent support translation of site JavaScript and HTML files.",
+	"default": "enabled"
+}

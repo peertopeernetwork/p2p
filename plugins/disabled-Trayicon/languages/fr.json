@@ -1,0 +1,12 @@
+{
+	"Peer-to-Peer Network Github": "Peer-to-Peer Network Github",
+	"Report bug/request feature": "Rapport d'erreur/Demander une fonctionnalité",
+	"!Open Peer-to-Peer Network": "!Ouvrir Peer-to-Peer Network",
+	"Quit": "Quitter",
+	"(active)": "(actif)",
+	"(passive)": "(passif)",
+	"Connections: %s": "Connexions: %s",
+	"Received: %.2f MB | Sent: %.2f MB": "Reçu: %.2f MB | Envoyé: %.2f MB",
+	"Show console window": "Afficher la console",
+	"Start Peer-to-Peer Network when Windows starts": "Lancer Peer-to-Peer Network au démarrage de Windows"
+}

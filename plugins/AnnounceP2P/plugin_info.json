@@ -1,0 +1,5 @@
+{
+	"name": "AnnounceP2P",
+	"description": "Announce using P2P protocol.",
+	"default": "enabled"
+}

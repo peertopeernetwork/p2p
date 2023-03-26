@@ -1,0 +1,5 @@
+{
+	"name": "MultiUser",
+	"description": "Cookie based multi-users support on your Peer-to-Peer Network web interface.",
+	"default": "disabled"
+}

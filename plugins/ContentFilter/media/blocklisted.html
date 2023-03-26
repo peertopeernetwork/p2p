@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Blocklist</title>
+</head>
+
+<div class="content">
+ <h1>Site blocked</h1>
+ <h2>This site is on your blocklist:</h2>
+ <div id="details">
+  <div id="reason">Too much inappropriate images</div>
+  <div id="added">on 2022-02-22 20:22:02</div>
+ </div>
+ <div id="buttons">
+  <a href="/" class="textbutton textbutton-main" id="back">Back to homepage</a>
+  <a href="#Visit+Site" class="textbutton" id="visit">Remove from blocklist and visit the site</a>
+ </div>
+</div>
+
+<body>
+<script src="js/P2PFrame.js"></script>
+<script>
+function buf2hex(buffer) {
+    return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
+}
+
+async function sha256hex(s) {
+    var buff = new TextEncoder("utf-8").encode(s)
+    return "0x" + buf2hex(await crypto.subtle.digest("SHA-256", buff))
+}
+
+class Page extends P2PFrame {
+    onOpenWebsocket () {
+    	this.cmd("wrapperSetTitle", "Visiting a blocked site - Peer-to-Peer Network")
+        this.cmd("siteInfo", {}, (site_info) => {
+            this.site_info = site_info
+        })
+        var address = document.location.search.match(/address=(.*?)[&\?]/)[1]
+        this.updateSiteblockDetails(address)
+    }
+
+    async updateSiteblockDetails(address) {
+        var block = await this.cmdp("siteblockGet", address)
+        var reason = block["reason"]
+        if (!reason) reason = "Unknown reason"
+        var date = new Date(block["date_added"] * 1000)
+        document.getElementById("reason").innerText = reason
+        document.getElementById("added").innerText = "at " + date.toLocaleDateString() + " " + date.toLocaleTimeString()
+        if (block["include"]) {
+            document.getElementById("added").innerText += " from a shared blocklist"
+            document.getElementById("visit").innerText = "Ignore blocking and visit the site"
+        }
+        document.getElementById("details").style.transform = "scale(1) rotateX(0deg)"
+        document.getElementById("visit").style.transform = "translateY(0)"
+        document.getElementById("visit").style.opacity = "1"
+        document.getElementById("visit").onclick = () => {
+            if (block["include"])
+                this.cmd("siteblockIgnoreAddSite", address, () => { this.cmd("wrapperReload") })
+            else
+                this.cmd("siteblockRemove", address, () => { this.cmd("wrapperReload") })
+        }
+    }
+}
+page = new Page()
+</script>
+</body>
+</html>

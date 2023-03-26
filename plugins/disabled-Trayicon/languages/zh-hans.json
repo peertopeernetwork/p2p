@@ -1,0 +1,12 @@
+{
+	"Peer-to-Peer Network Github": "Peer-to-Peer Network Github",
+	"Report bug/request feature": "反馈问题/请求功能",
+	"!Open Peer-to-Peer Network": "!打开 Peer-to-Peer Network",
+	"Quit": "退出",
+	"(active)": "(主动模式)",
+	"(passive)": "(被动模式)",
+	"Connections: %s": "连接数: %s",
+	"Received: %.2f MB | Sent: %.2f MB": "已接收: %.2f MB | 已发送: %.2f MB",
+	"Show console window": "显示控制台窗口",
+	"Start Peer-to-Peer Network when Windows starts": "在 Windows 启动时运行 Peer-to-Peer Network"
+}

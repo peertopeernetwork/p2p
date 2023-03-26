@@ -1,0 +1,12 @@
+ {
+	"Peer-to-Peer Network Github": "Peer-to-Peer Network Github",
+	"Report bug/request feature": "バグ報告/要望",
+	"!Open Peer-to-Peer Network": "!Peer-to-Peer Networkをブラウザで開く",
+	"Quit": "閉じる",
+	"(active)": "(アクティブ)",
+	"(passive)": "(パッシブ)",
+	"Connections: %s": "接続数: %s",
+	"Received: %.2f MB | Sent: %.2f MB": "受信: %.2f MB | 送信: %.2f MB",
+	"Show console window": "コンソールを表示",
+	"Start Peer-to-Peer Network when Windows starts": "Windows起動時にPeer-to-Peer Networkも起動する"
+}

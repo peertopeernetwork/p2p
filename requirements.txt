@@ -1,0 +1,13 @@
+gevent>=21.1.0
+gevent_ws
+msgpack>=1.0.3
+base58
+PySocks>=1.7.1
+defusedxml>=0.7.1
+pyasn1
+websocket_client
+coincurve
+maxminddb
+sslcrypto
+bencode_open
+pyaes

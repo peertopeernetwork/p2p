@@ -1,0 +1,5 @@
+{
+	"name": "Benchmark",
+	"description": "Test and benchmark database and cryptographic functions related to the Peer-to-Peer Network.",
+	"default": "enabled"
+}
